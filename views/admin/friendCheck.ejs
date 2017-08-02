@@ -1,0 +1,43 @@
+<% include header%>
+	<!-- 输入框组 -->
+	<style type="text/css">
+		img{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+		}
+		table.table tr td{
+			line-height: 51px;
+		}
+	</style>
+	<div class="container-fluid" style="margin-bottom: 50px;">
+		<h3 style="text-align: center;margin-bottom: 30px">分类列表</h3>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<table class="table" style="text-align: center">
+					<tr>
+						<td>网站名称</td>
+						<td>关键词</td>
+						<td>网站地址</td>
+						<td>联系方式</td>
+						<td>审核</td>
+					</tr>
+					<%for(var i = 0;i<datalist.length;i++){%>
+							<tr>
+								<td><%= datalist[i].name%></td>
+								<td><%= datalist[i].keyword %></td>
+								<td><%= datalist[i].url%></td>
+								<td><%= datalist[i].connecter%></td>
+								<td>
+									<a href="/admin/friendAgree/<%=datalist[i]._id%>"><button type="button" class="btn btn-info">通过</button></a>
+								</td>
+							</tr>
+					<% } %> 
+				</table>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+	<!-- 输入框组 END -->
+<% include footer%>

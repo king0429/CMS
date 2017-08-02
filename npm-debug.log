@@ -1,0 +1,36 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'run',
+1 verbose cli   'action' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.0
+4 verbose run-script [ 'preaction', 'action', 'postaction' ]
+5 info lifecycle hehecms@0.0.0~preaction: hehecms@0.0.0
+6 silly lifecycle hehecms@0.0.0~preaction: no script for preaction, continuing
+7 info lifecycle hehecms@0.0.0~action: hehecms@0.0.0
+8 verbose lifecycle hehecms@0.0.0~action: unsafe-perm in lifecycle true
+9 verbose lifecycle hehecms@0.0.0~action: PATH: D:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Users\ACER\Desktop\class\nodejs15\heheCMS\node_modules\.bin;D:\Ruby24\bin;C:\ProgramData\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\Program Files\Java\jdk1.8.0_11\bin;D:\Program Files\Java\jdk1.8.0_11\bin;E:\android-sdk-windows\platform-tools;C:\Python34\;D:\Program Files\sql\100\Tools\Binn\;D:\Program Files\sql\100\DTS\Binn\;D:\Program Files\sql\100\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies\;D:\Program Files\sql\100\Tools\Bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;D:\Program Files\Git\cmd;E:\less.js;D:\Program Files\nodejs\;C:\Program Files\MongoDB\Server\3.2\bin;D:\Program Files\Java\jdk1.8.0_11;d:\kuaijie;C:\Users\ACER\AppData\Roaming\npm
+10 verbose lifecycle hehecms@0.0.0~action: CWD: C:\Users\ACER\Desktop\class\nodejs15\heheCMS
+11 silly lifecycle hehecms@0.0.0~action: Args: [ '/d /s /c', 'supervisor node ./bin/www' ]
+12 verbose stack Error: kill ENOSYS
+12 verbose stack     at exports._errnoException (util.js:1018:11)
+12 verbose stack     at process.kill (internal/process.js:190:13)
+12 verbose stack     at process.listener (D:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:86:15)
+12 verbose stack     at emitNone (events.js:91:20)
+12 verbose stack     at process.emit (events.js:185:7)
+12 verbose stack     at processEmit (D:\Program Files\nodejs\node_modules\npm\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at processEmit (D:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\node_modules\npmlog\node_modules\gauge\node_modules\signal-exit\index.js:146:32)
+12 verbose stack     at Signal.wrap.onsignal (internal/process.js:217:44)
+13 verbose cwd C:\Users\ACER\Desktop\class\nodejs15\heheCMS
+14 error Windows_NT 6.1.7600
+15 error argv "D:\\Program Files\\nodejs\\node.exe" "D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "run" "action"
+16 error node v6.11.0
+17 error npm  v3.10.10
+18 error code ENOSYS
+19 error errno ENOSYS
+20 error syscall kill
+21 error kill ENOSYS
+22 error If you need help, you may report this error at:
+22 error     <https://github.com/npm/npm/issues>
+23 verbose exit [ 1, true ]

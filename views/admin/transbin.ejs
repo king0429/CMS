@@ -1,0 +1,40 @@
+<% include header%>
+	<!-- 输入框组 -->
+	<style type="text/css">
+		img{ 
+			width: 50px;
+			height: 50px;
+			border-radius: 50%; 
+		}
+	</style>
+	<div class="container-fluid" style="margin-bottom: 50px;">
+		<h3 style="text-align: center;margin-bottom: 30px">回收站</h3>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<table class="table" style="text-align: center">
+					<tr>
+						<td>标题</td>
+						<td>作者</td>
+						<td>栏目</td>
+						<td>还原|彻底删除</td>
+					</tr>
+					<%for(var i = 0;i<datalist.length;i++){%>
+							<tr>
+								<td><%= datalist[i].title%></td>
+								<td><%= datalist[i].author %></td>
+								<td><%= datalist[i].catId.name%></td>
+								<td>
+									<a href="/admin/reshowArticle/<%=datalist[i]._id%>">还原</a>
+          				|
+									<a href="/admin/byeArticle/<%=datalist[i]._id%>">彻底删除</a>
+								</td>
+							</tr>
+					<% } %> 
+				</table>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+	<!-- 输入框组 END -->
+<% include footer%>

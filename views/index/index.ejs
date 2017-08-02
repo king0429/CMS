@@ -1,0 +1,22 @@
+<% include header %>
+<div class="container">
+	<div class="jumbotron">
+	  <h1>大爷，来玩啊</h1>
+	  <p>在知识的海洋里洗澡</p>
+	  <p>我们就是文雅的人</p>
+	</div>
+	<%for (var i = 0; i < datalist.length; i++) {%>
+		<div class="panel panel-default">
+	 	 <div class="panel-heading"><%=datalist[i].name%></div>
+	 	 <div class="panel-body">
+	 	 	<ol>
+  	  <%datalist[i].article.forEach(function (article) {%>
+  	  	<li><a href="/articleContent/<%=article._id%>"><%=article.title%></a></li>
+  	  	<div class="clearfix"></div>
+  	  <%})%>
+	 	 	</ol>
+	 	 </div>
+		</div> 
+	<% }%>
+</div>
+<% include footer %>

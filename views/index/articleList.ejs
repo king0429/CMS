@@ -1,0 +1,25 @@
+<% include header %>
+<style type="text/css">
+	.title{
+		display: block;
+		float: left;
+	}
+	.time{
+		width: 123px;
+		float: right;
+		color:#333;
+	}
+</style>
+	<div class="container" style="height: 400px">
+		<ul class="list-group">
+		<%data.forEach(function (val) {%>		
+		  <li class="list-group-item" style="width: 100%;">
+
+		  		<a class="title" href="/articleContent/<%=val._id%>"><%=val.title%></a>
+					<div class="time"><%=val.ctime.toLocaleString()%></div >
+
+		  </li>
+		<%}) %>  
+		</ul>		
+	</div> 
+<% include footer %>   

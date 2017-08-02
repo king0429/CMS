@@ -1,0 +1,44 @@
+<% include header%>
+	<!-- 输入框组 -->
+	<style type="text/css">
+		img{
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+		}
+	</style>
+	<div class="container-fluid" style="margin-bottom: 50px;">
+		<h3 style="text-align: center;margin-bottom: 30px">分类列表</h3>
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<table class="table" style="text-align: center">
+					<tr>
+						<td>封面</td>
+						<td>栏目名称</td>
+						<td>栏目介绍</td>
+						<td>创建时间</td>
+						<td>排序</td>
+						<td>编辑|删除</td>
+					</tr>
+					<%for(var i = 0;i<datalist.length;i++){%>
+							<tr>
+				 				<td><img src="/<%=datalist[i].imgUrl %>" alt=""></td>
+								<td><%= datalist[i].name%></td>
+								<td><%= datalist[i].info %></td>
+								<td><%= datalist[i].ctime.toLocaleString()%></td>
+								<td><%= datalist[i].order %></td>
+								<td>
+									<a href="/admin/catEdit/<%=datalist[i]._id%>">编辑</a>
+          				|
+									<a href="/admin/catDel/<%=datalist[i]._id%>">删除</a>
+								</td>
+							</tr>
+					<% } %> 
+				</table>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+	<!-- 输入框组 END -->
+<% include footer%>

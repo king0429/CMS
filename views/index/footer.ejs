@@ -1,0 +1,37 @@
+<style>
+	footer{
+		width: 100%;
+		background: #2a2730;
+		color: rgb(250,250,250);
+	}
+	p{
+		color: white
+	}
+	ul{
+		margin-bottom: 20px;
+	}
+	li{
+		list-style: none;
+		float: left;
+		margin: 5px 5px;
+	}
+	footer a{
+		color:white;
+		font-size: 12px;
+	}
+</style>
+<footer>
+	<div class="container">
+		<p>友情链接</p>
+		<ul>
+			<% for(var j = 0;j<friendData.length;j++){ %>
+			<li><a target="_blank" href="http://<%=friendData[j].url%>"><%=friendData[j].name%></a></li>
+			<% } %>
+			<div class="clearfix"></div>
+		</ul>
+		<p><a href="/linkApplication">申请友情链接</a></p>
+	</div>
+	<div class="clearfix"></div>
+</footer>	
+</body>
+</html>
